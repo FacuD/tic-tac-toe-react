@@ -55,7 +55,6 @@ class Game extends React.Component {
       movesHistory: [{ row: 0, column: 0 }],
       xIsNext: true,
       stepNumber: 0,
-      width: 3,
     };
   }
 
@@ -71,7 +70,7 @@ class Game extends React.Component {
       return;
     }
     squares[i] = this.state.xIsNext ? "X" : "O";
-    const newMove = calculatePosition(i, this.state.width);
+    const newMove = calculatePosition(i);
 
     this.setState({
       history: history.concat([
@@ -158,8 +157,8 @@ function calculateWinner(squares) {
   return null;
 }
 
-function calculatePosition(position, width) {
-  const row = Math.trunc(position / width) + 1;
-  const column = Math.trunc(position % width) + 1;
+function calculatePosition(position) {
+  const row = Math.trunc(position / 3) + 1;
+  const column = Math.trunc(position % 3) + 1;
   return { row: row, column: column };
 }
