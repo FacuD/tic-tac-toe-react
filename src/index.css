@@ -22,7 +22,7 @@ ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
   line-height: 34px;
   height: 20vh;
@@ -50,20 +50,46 @@ ul {
 
 .game-info {
   margin-left: 20px;
+  font-size: 1.3rem;
 }
 
 .game-info > div > button {
   margin-left: 10px;
 }
 
+button {
+  font-size: 1.3rem;
+}
+
 .sort-button {
   display: none;
 }
 
-@media (max-width: 576px) {
+/* Small devices */
+@media (max-width: 768px) {
   .square {
-    height: 10vh;
-    width: 13vw;
+    height: 7vh;
+    width: 10vw;
     font-size: 2rem;
+  }
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .game-info {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 1400px) {
+  .square {
+    height: 11vh;
+    width: 11vw;
+    font-size: 3rem;
   }
 }
