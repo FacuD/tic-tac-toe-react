@@ -1,6 +1,6 @@
 # Tic Tac Toe App ❌⭕
 
-Frontend application built with React ⚛️. [Try it out here 🙌.](https://movies-react-tmdb.herokuapp.com)
+Frontend application built with React ⚛️. [Try it out here 🙌.](https://facud-tic-tac-toe-app.herokuapp.com)
 
 # Getting started
 
