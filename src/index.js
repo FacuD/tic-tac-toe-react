@@ -49,6 +49,7 @@ class Game extends React.Component {
       movesHistory: [{ row: 0, column: 0 }],
       xIsNext: true,
       stepNumber: 0,
+      sortAscending: true,
     };
   }
 
@@ -100,7 +101,7 @@ class Game extends React.Component {
         <li
           key={move}
           style={
-            move == this.state.stepNumber
+            move === this.state.stepNumber
               ? { fontWeight: "bold" }
               : { fontWeight: "normal" }
           }
@@ -109,6 +110,13 @@ class Game extends React.Component {
         </li>
       );
     });
+
+    function sortList(moves) {
+      // console.log(moves);
+      // moves.sort((a, b) => {
+      //   return a.key - b.key;
+      // });
+    }
 
     let status;
     if (winner) {
@@ -126,7 +134,12 @@ class Game extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div>
+            {status}
+            <button className="sort-button" onClick={() => sortList(moves)}>
+              Sort
+            </button>
+          </div>
           <ol>{moves}</ol>
         </div>
       </div>

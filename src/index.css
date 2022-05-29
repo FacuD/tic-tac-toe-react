@@ -22,15 +22,15 @@ ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 4rem;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 20vh;
+  width: 10vw;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
 }
 
 .square:focus {
@@ -44,8 +44,26 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 20vh;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.game-info > div > button {
+  margin-left: 10px;
+}
+
+.sort-button {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .square {
+    height: 10vh;
+    width: 13vw;
+    font-size: 2rem;
+  }
 }
